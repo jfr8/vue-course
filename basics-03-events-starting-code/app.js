@@ -3,10 +3,17 @@ const app = Vue.createApp({
     return {
       counter: 0,
       yourName: '',
+      confirmedName: ''
     };
   },
 
   methods: {
+    confirmName() {
+      this.confirmedName = this.yourName; 
+    },
+    submitForm(){
+      alert("submitted")
+    },
     addCounter(dynamicNum){
       return this.counter = this.counter + dynamicNum;
     },
